@@ -77,3 +77,10 @@ def unsubscribe(token):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+from database import init_db
+
+@app.route('/init-db')
+def init_database():
+    init_db()
+    return "Database initialized!"
