@@ -14,7 +14,7 @@ BASE_URL = os.getenv("BASE_URL", "http://localhost:5000")
 def send_email(recipient, subject, body):
     msg = MIMEText(body, 'plain')
     msg['Subject'] = subject
-    msg['From'] = FROM_EMAIL
+    msg['From'] = f"Calendar Reminder Bot <{FROM_EMAIL}>"
     msg['To'] = recipient
 
     try:
