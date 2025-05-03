@@ -58,7 +58,8 @@ def update(token):
         digest_time = request.form.get('digest_time')
         digest_range = request.form.get('digest_range')
         update_user(email, days_before, time_of_day, digest, digest_day, digest_time, digest_range)
-        flash("Preferences updated!")
+        send_edit_link(email, token)  # confirmation
+        flash("Preferences updated! A confirmation email was sent.")
         return redirect(url_for('edit', token=token))
     except:
         flash("Something went wrong.")
