@@ -7,7 +7,7 @@
 </head>
 <body class="bg-light">
 <div class="container mt-5">
-  <h2 class="mb-4">Sign up for Event Reminders</h2>
+  <h2 class="mb-4">Sign up for MIT grad calendar event reminders</h2>
 
   {% with messages = get_flashed_messages() %}
     {% if messages %}
@@ -29,7 +29,7 @@
     </div>
 
     <div class="mb-3">
-      <label>Time of day to receive daily reminders:</label>
+      <label>Time of day to receive daily reminders (ET):</label>
       <input type="time" name="time_of_day" value="08:00" class="form-control">
     </div>
 
@@ -48,7 +48,7 @@
     </div>
 
     <div class="mb-3">
-      <label>Time of day for digest:</label>
+      <label>Time of day for digest (ET):</label>
       <input type="time" name="digest_time" value="08:00" class="form-control">
     </div>
 
