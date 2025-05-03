@@ -3,7 +3,7 @@ import os
 from email.mime.text import MIMEText
 from flask import url_for
 
-SMTP_SERVER = "smtp.office365.com"
+SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 FROM_EMAIL = os.getenv("EMAIL_ADDRESS", "you@example.com")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
