@@ -28,7 +28,7 @@ def send_email(recipient, subject, body):
 
 def send_confirmation_email(email, token):
     link = f"{BASE_URL}/edit/{token}"
-    subject = "Confirm your event reminder signup"
+    subject = "Event reminder signup confirmation"
     body = f"Thanks for signing up!\n\nYou can edit your reminder preferences here:\n{link}\n\nTo unsubscribe at any time:\n{BASE_URL}/unsubscribe/{token}"
     send_email(email, subject, body)
 
